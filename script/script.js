@@ -87,6 +87,7 @@ $(document).ready(function () {
         } else {
             users.push(obj);
             localStorage.setItem('formData', JSON.stringify(users));
+            localStorage.setItem('currentUserEmail', email);
             $('input').val('');
             location.replace("../quiz.html");
         }
@@ -136,6 +137,7 @@ $(document).ready(function () {
 
         if (valid) {
             clearError($("#6 + p"), $("#6"))
+            localStorage.setItem('currentUserEmail', email);
             $('input').val('');
             location.replace("../quiz.html");
         }
