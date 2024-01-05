@@ -77,8 +77,8 @@ showQue(current)
 next.addEventListener('click', () => {
   current++
   checkBtns()
-  checkSelected()
   showQue(current)
+  checkSelected(current)
   count.innerHTML = current + 1
 })
 
@@ -86,8 +86,8 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
   current--
   checkBtns()
-  checkSelected()
   showQue(current)
+  checkSelected(current)
   count.innerHTML = current + 1
 })
 
@@ -96,7 +96,7 @@ let answers = []
 ansEle.forEach((ele) => {
   ele.addEventListener('click', () => {
     answers[current] = ele.innerHTML
-    checkSelected()
+    checkSelected(current)
   })
 })
 
@@ -123,7 +123,7 @@ document.querySelector('.right').addEventListener('click', (e) => {
     })
     count.innerHTML = parseInt(current) + 1
     checkBtns()
-    checkSelected()
+    checkSelected(current)
   }
 })
 
@@ -134,7 +134,8 @@ submit.addEventListener('click', () => {
       grade++
     }
   })
-  localStorage.setItem("grade", grade);
+  let gradePer = (grade / shuffled.length)*100;
+  localStorage.setItem("grade", gradePer.toFixed(2));
   location.replace("./gradePage.html")
 })
 
@@ -155,14 +156,15 @@ function checkBtns() {
   }
 }
 
-//TODO: Check selected answer to change its color
-function checkSelected() {
+//TODO: Check selected answer to change its background color
+function checkSelected(i) {
+  console.log(i);
   ansEle.forEach((choice) => {
-    console.log(answers)
-    if (answers[current] != undefined) {
-      if (choice.innerHTML === answers[current]) {
-        console.log(choice.innerHTML)
-        console.log(answers[current])
+    if (answers[i] != undefined) {
+      console.log(answers[i]);
+      console.log(choice.innerHTML);
+      if (choice.innerHTML == answers[i]) {
+        console.log(choice);
         ansEle.forEach((el) => {
           el.classList.remove('checked')
         })

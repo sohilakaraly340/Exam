@@ -18,6 +18,7 @@ body{
     padding: 20px;
     background-image: url("../images/bg.png");
     background-repeat: repeat;
+    font-size: 20px;
 }
 .container > div{
     -webkit-border-radius: 7px;
@@ -25,12 +26,12 @@ body{
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
     border-radius: 7px;
-    padding: 10px;
+    padding: 14px;
     box-shadow: 4px 7px 13px -1px rgb(19, 19, 19);
+    min-height: 400px;
 }
 .left{
     width: 70%;
-    height: 82%;
     background-color: white;
 }
 progress{
@@ -57,13 +58,13 @@ progress{
 }
 .left .q{
     background-color: var(--primary-color);
-    padding: 5px 10px;
+    padding: 10px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,13 +72,16 @@ progress{
 .left .choices .choice{
     background-color: #86a78946;
     margin: 10px 0;
-    padding: 0 10px;
+    padding: 6px 10px;
     cursor: pointer;
-    height: 32px;
-    line-height: 32px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 .left .choices .checked{
-    background-color: red;
+    background-color: #86a789c5;
 }
 .left .q .ques{
     width: 80%;
@@ -92,13 +96,15 @@ i{
 button{
     outline: none;
     border: 1px solid var(--primary-color);
-    padding: 6px 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 100px;
     font-weight: 500;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
@@ -132,17 +138,17 @@ button#submit:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 }
 .right{
     background-color: var(--primary-color);
-    height: 82%;
     width: 20%;
     text-align: center;
     /* overflow-y: scroll; */
 }
 .right h4{
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     border-bottom: 2px solid white;
 }
 .right div{
@@ -156,7 +162,3 @@ button#submit:hover{
     border-radius: 3px;
     cursor: pointer;
 }
-
-
-
-
