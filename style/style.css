@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    background-image: linear-gradient(to left bottom, #f7f2ec, #f2ede1, #ebe9d7, #e0e6ce, #d2e3c8);
+}
+
+.signIn-out {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    background-color: #86A789;
+    padding: 30px 50px ;
+    margin: 45px auto;
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.signIn-out #signIn-Img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.signIn-out #signIn-Img img {
+    width: 95%;
+}
+
+.signIn-out #form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:100px;
+}
+
+
+#form .inputs {
+    color: white;
+    width: 80%;
+    position: relative;
+}
+
+#form .inputs label {
+    margin: 35px 0 10px 0;
+    display: inline-block;
+}
+
+#form .inputs input {
+    display: block;
+    width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 1px solid #4F6F52;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: #F7F2EC;
+    padding: 5px 15px;
+
+}
+
+.req {
+    color: red;
+    display: none;
+}
+
+.inputs button {
+    display: flex;
+    margin: 20px 0 ;
+    margin-left: 70px;
+    padding: 10px 60px;
+    font-size: 16px;
+    border: 1px solid #F7F2EC;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.inputs button:hover{
+    transform: scale(1.1);
+    color: #4F6F52;
+    background-color: #F7F2EC;
+}
+input:focus {
+    outline: none;
+  }
+
+.signIn{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    margin-left: 5px;
+    
+}
+
+#signSpan{
+    margin-left: 50px;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+  }
+  
+  .shake {
+    animation: horizontal-shaking 0.5s ease-in-out;
+  }
+
+
+  #signIn{
+    display: none;
+  }
+  p{
+    font-size: large;
+  }
+
+
+  @keyframes rotate {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.signin {
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+

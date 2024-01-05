@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="styleSheet" href="style/style.css" />
+</head>
+
+<body>
+    <main class="signIn-out">
+        <div id="signIn-Img">
+            <img src="./images/signUp.svg" />
+        </div>
+        <div id="form">
+            <form class="inputs" id="signUp" method="post">
+                <label>First Name</label>
+                <input type="text"   name="firstName"  id="0"  class="SignUp-Input" />
+                <p class="req">this field required</p>
+                
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="1"   class="SignUp-Input" />
+                <p class="req">this field required</p>
+                
+                <label>Email</label>
+                <input type="email"   name="email" id="2"   class="SignUp-Input" />
+                <p class="req">this field required</p>
+                
+                <label>Password</label>
+                <input type="password" name="password" id="3"   class="SignUp-Input" />
+                <p class="req">this field required</p>
+
+                <label>Re-enter password</label>
+                <input type="password"  name="re-password" id="4"   class="SignUp-Input" />
+                <p class="req">this field required</p>
+                
+                <button >Sign Up</button>
+                <span id="signSpan">Have already an acount? <span class="signIn">Sign In</span></span>
+
+            </form>
+
+            <form class="inputs" id="signIn" method="post">
+                <label>Email</label>
+                <input type="email"   name="email" id="5" class="myInput" />
+                <p class="req">this field required</p>
+                
+                <label>Password</label>
+                <input type="password" name="password" id="6" class="myInput" />
+                <p class="req">this field required</p>
+                <button >Sign In</button>
+
+            </form>
+
+        </div>
+        </div>
+
+
+    </main>
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body{
+            height: 100%;
+            color: white;
+        }
+        .container{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            width: 200px;
+            margin: 20px;
+        }
+        .grade{
+            width: 90%;
+            height: 90%;
+            background-image: url("./images/image-a5ntct78.png");
+            background-repeat: repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            -webkit-border-radius: 3%;
+            -moz-border-radius: 3%;
+            -ms-border-radius: 3%;
+            -o-border-radius: 3%;
+            border-radius: 3%;
+            box-shadow: 4px 7px 13px -1px rgb(19, 19, 19);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grade">
+            <h2>Result</h2>
+            <img src="./images/success.svg" alt="">
+            <div class="result"></div>
+            <p></p>
+        </div>
+    </div>
+    <script>
+        let result = document.querySelector(".result");
+        let msgEle = document.querySelector("p");
+        let img = document.querySelector("img")
+        result.innerHTML = `Your grade is ${localStorage.getItem("grade")}`
+        if(localStorage.getItem("grade") < 5){
+            msgEle.innerHTML = "Sorry , you Failed in this quiz "
+            img.src="./images/fail.svg"
+        }else if(localStorage.getItem("grade") < 7){
+            msgEle.innerHTML = "Try again you can do it"
+        }else{
+            msgEle.innerHTML = "Congratulations!!"
+        }
+    </script>
+</body>
+</html>
