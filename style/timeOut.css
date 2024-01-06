@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    padding: 50px 40px;
+    width: 70%;
+    border-radius:0 0 10px 10px;
+    background-color: #86A789;
+    margin: 0 auto;
+    color: aliceblue;
+    text-align: center;
+}
+h1{
+    padding: 20px;
+}
