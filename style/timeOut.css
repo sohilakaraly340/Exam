@@ -10,6 +10,7 @@ div{
     margin: 0 auto;
     color: aliceblue;
     text-align: center;
+    display: none;
 }
 h1{
     padding: 20px;
