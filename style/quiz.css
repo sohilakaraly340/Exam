@@ -152,10 +152,10 @@ button#submit:hover{
     background-color: white;
     margin: 10px;
     padding: 5px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
     border-radius: 3px;
     cursor: pointer;
     -webkit-transition: all .5s;
@@ -207,4 +207,31 @@ i.delete{
     .right div{
         flex-direction: row;
     }
+}
+.palastine{
+    position: absolute;
+}
+.tri{
+    clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
+    background-color: red;
+    width: 89px;
+    height: 96px;
+    transform: rotate(90deg);
+    z-index: 1000;
+    margin-top: -90px;
+}
+.rec1{
+  background-color: black;
+  width: 182px;
+  height: 28px;
+}
+.rec2{
+  background-color: white;
+  width: 182px;
+  height: 28px;
+}
+.rec3{
+  background-color: green;
+  width: 182px;
+  height: 28px;
 }

@@ -39,3 +39,30 @@ img{
 h2{
     font-size: 40px;
 }
+.palastine{
+    position: absolute;
+}
+.tri{
+    clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
+    background-color: red;
+    width: 89px;
+    height: 96px;
+    transform: rotate(90deg);
+    z-index: 1000;
+    margin-top: -90px;
+}
+.rec1{
+  background-color: black;
+  width: 182px;
+  height: 28px;
+}
+.rec2{
+  background-color: white;
+  width: 182px;
+  height: 28px;
+}
+.rec3{
+  background-color: green;
+  width: 182px;
+  height: 28px;
+}
