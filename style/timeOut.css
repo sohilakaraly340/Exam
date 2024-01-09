@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    height: 100vh;
+}
+body{
+    background-image: linear-gradient(
+        to right bottom,
+        #f7f2ec,
+        #f2ede1,
+        #ebe9d7,
+        #e0e6ce,
+        #d2e3c8
+      );
+      background-repeat: no-repeat;
+      height: 100%;
+    }
+div{
+    padding: 50px 40px;
+    width: 70%;
+    border-radius:0 0 10px 10px;
+    background-color: #86A789;
+    margin: 0 auto;
+    color: aliceblue;
+    text-align: center;
+    display: none;
+
+}
+h1{
+    padding: 20px;
+}
