@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 :root{
     --primary-color: #86A789;
 }
@@ -5,6 +6,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color:  #4F6F52;
 }
 html,
 body{
@@ -57,10 +60,10 @@ progress{
 .left .q{
     background-color: var(--primary-color);
     padding: 10px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
     border-radius: 5px;
     margin: 15px 0;
     display: flex;
@@ -72,17 +75,19 @@ progress{
     margin: 10px 0;
     padding: 6px 10px;
     cursor: pointer;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
 }
 .left .choices .checked{
     background-color: #86a789c5;
+    color: white;
 }
 .left .q .ques{
     width: 80%;
+    color: white;
 }
 i#mark{
     color: white;
@@ -94,14 +99,14 @@ i#mark{
 button{
     outline: none;
     border: 1px solid var(--primary-color);
-    padding: 10px 20px;
+    padding: 10px 12px;
     font-size: 18px;
     width: 100px;
     font-weight: 500;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
     border-radius: 25px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -147,15 +152,16 @@ button#submit:hover{
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 2px solid white;
+    color: white;
 }
 .right div{
     background-color: white;
     margin: 10px;
-    padding: 5px;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    -ms-border-radius:3px;
-    -o-border-radius:3px;
+    padding: 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     border-radius: 3px;
     cursor: pointer;
     -webkit-transition: all .5s;
@@ -171,8 +177,9 @@ button#submit:hover{
     color: var(--primary-color);
 }
 i.delete{
-    color: var(--primary-color);
+    color: red;
     cursor: pointer;
+    font-size: smaller;
 }
 @media (max-width: 767px) {
     .container,
