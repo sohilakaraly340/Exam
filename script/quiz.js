@@ -44,8 +44,15 @@ let qaArr = [
 setInterval(function () {
   time++;
   progress.val(time);
+  let timeInMin = Math.floor((300 - time) / 60);
+  let timeInSec = (300 - time) % 60;
+  $("#time").html(`0${timeInMin}:${timeInSec<10 ? '0' + timeInSec : timeInSec}`);
   sessionStorage.setItem("time", time);
-  if (time == 100) {
+  if(time > 250){
+    $("#time").css("color","red");
+    $("#timer i").css("color","red");
+  }
+  if (time == 300) {
     location.replace("./timeoutPage.html");
   }
 }, 1000);
@@ -111,6 +118,7 @@ let markedIndices = [];
 
 mark.on('click', () => {
   if (!markedQues.includes(qaObj)) {
+    console.log(qaObj);
     markedQues.push(shuffled[current]);
     markedIndices.push(current);
     let mQ = $('<div>');
@@ -124,9 +132,8 @@ mark.on('click', () => {
 //TODO: Marked questions click event
 $('.right').on('click', (e) => {
   if ($(e.target).attr('id')) {
-    qEle.html(markedQues[$(e.target).attr('id')].answers.ques);
+    qEle.html(markedQues[$(e.target).attr('id')].ques);
     current = parseInt($(e.target).attr('class').split(' ')[0]);
-    console.log(current)
     ansEle.each((i, ele) => {
       $(ele).html(markedQues[$(e.target).attr('id')].answers.arr[i]);
     });
@@ -136,6 +143,8 @@ $('.right').on('click', (e) => {
   }
 
   if($(e.target).hasClass("delete")){
+    markedQues[$(e.target).parent().attr("id")] = "";
+    markedIndices[$(e.target).parent().attr("id")] = "";
     $(e.target).parent().remove();
   }
 });
@@ -148,24 +157,30 @@ submit.on('click', () => {
     }
   });
   let gradePer = (grade / shuffled.length) * 100;
-  localStorage.setItem("grade", gradePer.toFixed(2));
+  localStorage.setItem("grade", Math.round(gradePer));
   location.replace("./gradePage.html");
 });
 
 //TODO: Check whether to display prev, next and submit buttons or not
 function checkBtns() {
   if (current == 0) {
-    prev.css('display', 'none');
-    next.css('display', 'inline-block');
-    submit.css('display', 'none');
+    // prev.css('display', 'none');
+    // next.css('display', 'inline-block');
+    // submit.css('display', 'none');
+    prev.prop("disabled", true);
+    next.prop("disabled", false);
   } else if (current == shuffled.length - 1) {
-    prev.css('display', 'inline-block');
-    next.css('display', 'none');
-    submit.css('display', 'inline-block');
+    // prev.css('display', 'inline-block');
+    // next.css('display', 'none');
+    // submit.css('display', 'inline-block');
+    prev.prop("disabled", false);
+    next.prop("disabled", true);
   } else {
     prev.css('display', 'inline-block');
     next.css('display', 'inline-block');
-    submit.css('display', 'none');
+    prev.prop("disabled", false);
+    next.prop("disabled", false);
+    // submit.css('display', 'none');
   }
 }
 

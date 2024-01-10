@@ -14,10 +14,11 @@ users.forEach(user => {
     }
 });
 
-result.html(`Your grade is ${localStorage.getItem("grade")} %`);
+result.html(`Your grade is <span>${localStorage.getItem("grade")}<span> %`);
 
 if (localStorage.getItem("grade") < 50) {
     msgEle.html(`Sorry ${firstName} ${lastName}, you Failed in this quiz`);
+    $(".result span").css("color","red")
     img.attr("src", "./images/fail.svg");
 } else if (localStorage.getItem("grade") < 70) {
     msgEle.html(`Try again  ${firstName} ${lastName}, you can do it`);

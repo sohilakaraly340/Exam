@@ -30,12 +30,20 @@ body{
     -o-border-radius: 7px;
     border-radius: 7px;
     padding: 14px;
-    box-shadow: 4px 7px 13px -1px rgb(19, 19, 19);
+    -webkit-box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);
+    -moz-box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);
+    box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);
     min-height: 400px;
 }
 .left{
     width: 70%;
     background-color: white;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -10px;
 }
 progress{
     appearance: none;
@@ -54,16 +62,27 @@ progress{
     background-color: var(--primary-color);
 }
 .left h4{
-    margin-bottom: -10px;
+    /* margin-bottom: -10px; */
     padding: 5px;
+}
+#timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+}
+#timer span {
+    background-color: white;
+    padding: 6px;
+    margin: 5px;
 }
 .left .q{
     background-color: var(--primary-color);
     padding: 10px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    -o-border-radius:5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     border-radius: 5px;
     margin: 15px 0;
     display: flex;
@@ -93,27 +112,29 @@ i#mark{
     color: white;
     cursor: pointer;
 }
-.left .btns{
-    text-align: right;
+.footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 button{
     outline: none;
     border: 1px solid var(--primary-color);
-    padding: 10px 12px;
-    font-size: 18px;
-    width: 100px;
-    font-weight: 500;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
-    -ms-border-radius:3px;
-    -o-border-radius:3px;
-    border-radius: 25px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -ms-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
     cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
 }
 button#prev,
 button#next:hover{
@@ -121,27 +142,37 @@ button#next:hover{
     color: var(--primary-color);
 }
 button#next,
-button#prev:hover{
+button#prev:hover,
+button#submit:hover{
     background-color: var(--primary-color);
     color: white;
 }
 button#submit{
-    background-color: red;
-    color: white;
-    border-color: red;
-}
-button#submit:hover{
-    background-color: white;
-    color: red;
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    position: absolute;
+    right: 10px;
 }
 .count span{
+    margin: 5px;
     color: var(--primary-color);
 }
 .footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 10px;
+    position: relative;
+}
+.count{
+    margin: 0 10px;
 }
 .right{
     background-color: var(--primary-color);
@@ -181,6 +212,9 @@ i.delete{
     cursor: pointer;
     font-size: smaller;
 }
+button:disabled{
+    pointer-events: none;
+}
 @media (max-width: 767px) {
     .container,
     button{
@@ -191,6 +225,9 @@ i.delete{
     }
     .right div{
         flex-direction: column;
+    }
+    .footer{
+        justify-content: start;
     }
 }
 @media (max-width: 480px) {
@@ -204,9 +241,9 @@ i.delete{
     }
     .footer{
         flex-direction: column;
-    }
-    div.count{
-        margin-bottom:10px ;
+    } 
+    button#submit{
+        position: static;
     }
     .right{
         width: 70%;
@@ -214,65 +251,9 @@ i.delete{
     .right div{
         flex-direction: row;
     }
+    #timer{
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
 }
-.palastine{
-    position: absolute;
-    animation: wave 1s ease-in-out infinite alternate;
-  }
-  .tri{
-      clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
-      background-color: red;
-      width: 89px;
-      height: 96px;
-      transform: rotate(90deg);
-      z-index: 1000;
-      margin-top: -90px;  
-  }
-  .rec1{
-    background-color: black;
-    width: 182px;
-    height: 28px;
-  }
-  .rec2{
-    background-color: white;
-    width: 182px;
-    height: 28px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .rec2 span {
-    margin-left: 45px;
-    font-size: 12px;
-    opacity: 0; 
-    animation: fadeInOut 5s ease-in-out infinite;
-  }
-  
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1; 
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  .rec3{
-    background-color: green;
-    width: 182px;
-    height: 28px;
-  }
-  
-  @keyframes wave {
-    0% {
-      transform: translateY(2%);
-    }
-    
-    100% {
-      transform: translateY(-2%);
-    }
-  }

@@ -46,8 +46,9 @@ img{
     -ms-border-radius: 3% ;
     -o-border-radius: 3% ;
     border-radius: 3% ;
-    box-shadow: 4px 7px 13px -1px rgb(19, 19, 19);
-}
+    -webkit-box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);
+    -moz-box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);
+    box-shadow: 10px 9px 41px -1px rgba(0,0,0,0.62);}
 h2{
     font-size: 40px;
 }
