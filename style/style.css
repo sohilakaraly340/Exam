@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 65%;
-  margin: 0 auto;
+  margin: -40px auto;
   border-radius: 20px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -98,10 +98,6 @@ body {
 }
 
 .inputs button:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
   transform: scale(1.1);
   color: #4f6f52;
   background-color: #f7f2ec;
@@ -124,38 +120,18 @@ input:focus {
 
 @keyframes horizontal-shaking {
   0% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
 }
   25% {
-    -webkit-transform: translateX(5px);
-    -moz-transform: translateX(5px);
-    -ms-transform: translateX(5px);
-    -o-transform: translateX(5px);
     transform: translateX(5px);
   }
   50% {
-    -webkit-transform: translateX(-5px);
-    -moz-transform: translateX(-5px);
-    -ms-transform: translateX(-5px);
-    -o-transform: translateX(-5px);
     transform: translateX(-5px);
 }
   75% {
-    -webkit-transform: translateX(5px);
-    -moz-transform: translateX(5px);
-    -ms-transform: translateX(5px);
-    -o-transform: translateX(5px);
     transform: translateX(5px);
 }
   100% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
     transform: translateX(0);
 }
 }
@@ -180,10 +156,6 @@ p {
     transform: rotateX(90deg);
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
   }
 }
@@ -206,6 +178,10 @@ p {
     width: 100%;
   }
 }
+.palastine{
+  position: relative;
+  animation: wave 1s ease-in-out infinite alternate;
+}
 .tri{
     clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
     background-color: red;
@@ -213,7 +189,7 @@ p {
     height: 96px;
     transform: rotate(90deg);
     z-index: 1000;
-    margin-top: -90px;
+    margin-top: -90px;  
 }
 .rec1{
   background-color: black;
@@ -224,9 +200,42 @@ p {
   background-color: white;
   width: 182px;
   height: 28px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.rec2 span {
+  margin-left: 45px;
+  font-size: 12px;
+  opacity: 0; 
+  animation: fadeInOut 5s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .rec3{
   background-color: green;
   width: 182px;
   height: 28px;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(2%);
+  }
+  
+  100% {
+    transform: translateY(-2%);
+  }
 }

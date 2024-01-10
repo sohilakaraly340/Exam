@@ -139,7 +139,7 @@ $(document).ready(function () {
             clearError($("#6 + p"), $("#6"))
             localStorage.setItem('currentUserEmail', email);
             $('input').val('');
-            location.replace("./quiz.html");
+            location.replace("./startQuiz.html");
         }
     });
 
@@ -153,6 +153,7 @@ $(document).ready(function () {
             signIn.css("display", "block");
             $("#signIn-Img img").attr("src", "./images/signIn.svg");
             $(".signIn-out").css("transform", "rotateY(0deg)").addClass("signin");
+            $(".signIn-out").css("margin-top", "50px");
         }, 100);
     });
 });
