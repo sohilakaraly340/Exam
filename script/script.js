@@ -89,7 +89,7 @@ $(document).ready(function () {
             localStorage.setItem('formData', JSON.stringify(users));
             localStorage.setItem('currentUserEmail', email);
             $('input').val('');
-            location.replace("../quiz.html");
+            SignIn()
         }
     }
 
@@ -143,10 +143,9 @@ $(document).ready(function () {
         }
     });
 
-    $('.signIn').click(function () {
+    function SignIn(){
         const signUp = $("#signUp");
         const signIn = $("#signIn");
-
 
         setTimeout(function () {
             signUp.css("display", "none");
@@ -154,6 +153,11 @@ $(document).ready(function () {
             $("#signIn-Img img").attr("src", "./images/signIn.svg");
             $(".signIn-out").css("transform", "rotateY(0deg)").addClass("signin");
             $(".signIn-out").css("margin-top", "50px");
+            $(".signIn-out #form").css("height","475px")
         }, 100);
+    }
+
+    $('.signIn').click(function () {
+        SignIn()
     });
 });

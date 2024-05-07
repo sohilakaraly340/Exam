@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 }
-html{
-  height:100vh;
+html {
+  height: 100vh;
 }
 body {
   height: 90%;
@@ -51,8 +50,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding:10px 50px ;
-  border-radius: 0 20px 20px  0;
+  padding: 10px 50px;
+  border-radius: 0 20px 20px 0;
   background-image: url("../images/bg.png");
 }
 
@@ -122,23 +121,23 @@ input:focus {
 @keyframes horizontal-shaking {
   0% {
     transform: translateX(0);
-}
+  }
   25% {
     transform: translateX(5px);
   }
   50% {
     transform: translateX(-5px);
-}
+  }
   75% {
     transform: translateX(5px);
-}
+  }
   100% {
     transform: translateX(0);
-}
+  }
 }
 
 .shake {
-    -webkit-animation: horizontal-shaking 0.5s ease-in-out;
+  -webkit-animation: horizontal-shaking 0.5s ease-in-out;
   animation: horizontal-shaking 0.5s ease-in-out;
 }
 
@@ -173,31 +172,37 @@ p {
   }
   .signIn-out #form {
     margin-left: 0;
-    width: fit-content;
+    width: 100%;
+    border-radius: 20px;
+    z-index: 99;
   }
   #form .inputs {
     width: 100%;
   }
+  .inputs button {
+    padding: 10px;
+  }
 }
-.palastine{
+
+.palastine {
   position: relative;
   animation: wave 1s ease-in-out infinite alternate;
 }
-.tri{
-    clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
-    background-color: red;
-    width: 89px;
-    height: 96px;
-    transform: rotate(90deg);
-    z-index: 1000;
-    margin-top: -90px;  
+.tri {
+  clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
+  background-color: red;
+  width: 89px;
+  height: 96px;
+  transform: rotate(90deg);
+  z-index: 1000;
+  margin-top: -90px;
 }
-.rec1{
+.rec1 {
   background-color: black;
   width: 182px;
   height: 28px;
 }
-.rec2{
+.rec2 {
   background-color: white;
   width: 182px;
   height: 28px;
@@ -209,7 +214,7 @@ p {
 .rec2 span {
   margin-left: 45px;
   font-size: 12px;
-  opacity: 0; 
+  opacity: 0;
   animation: fadeInOut 5s ease-in-out infinite;
 }
 
@@ -218,14 +223,14 @@ p {
     opacity: 0;
   }
   50% {
-    opacity: 1; 
+    opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
 
-.rec3{
+.rec3 {
   background-color: green;
   width: 182px;
   height: 28px;
@@ -235,7 +240,7 @@ p {
   0% {
     transform: translateY(2%);
   }
-  
+
   100% {
     transform: translateY(-2%);
   }
